@@ -2,6 +2,9 @@ FROM node
 
 RUN npm install -g mjml-server
 
-EXPOSE 28102
+ARG DEFAULT_PORT=28102
+ENV HOST=0.0.0.0
+ENV PORT=${DEFAULT_PORT}
 
-ENTRYPOINT mjml-server --hostname 0.0.0.0 --port 28102
+EXPOSE ${DEFAULT_PORT}
+ENTRYPOINT mjml-server --hostname ${HOST} --port ${PORT}
