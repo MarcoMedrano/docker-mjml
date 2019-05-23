@@ -1,6 +1,7 @@
-# MJML NODE SERVER
+# DOCKER MJML SERVER
 This image was made using [mjml-server](https://www.npmjs.com/package/mjml-server)
 
+If you want to fork it/pull request/report an issue , [here](https://github.com/MarcoMedrano/docker-mjml)
 ## Usage
 ```
 docker run -d -p 28102:28102 marcomedrano/mjml
