@@ -1,13 +1,7 @@
-FROM node:12.1
+FROM node
 
-# Set the working directory to /app
-WORKDIR /app/test
-COPY ./test /app/test
-RUN npm install
+RUN npm install -g mjml-server
 
-WORKDIR /app
-RUN npm install mjml-server
+EXPOSE 28102
 
-# EXPOSE 1410
-
-ENTRYPOINT npx mjml-server --hostname 0.0.0.0
+ENTRYPOINT mjml-server --hostname 0.0.0.0 --port 28102
